@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>SeniorApp</title>
+    <title>SeniorLink</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -30,6 +30,7 @@
            LOGIN
         ════════════════════════════════ */
         #screen-login{
+            overflow-y:auto !important;
             background:linear-gradient(160deg,#e8f4ff 0%,#f5f9ff 40%,#eef6f0 100%);
             align-items:center;justify-content:center;
         }
@@ -449,6 +450,16 @@
                         <div class="tb-name">👴 Roger Martin</div>
                         <div class="tb-info">roger@seniorlink.fr · test1234</div>
                     </button>
+                    <button class="test-btn" onclick="fillLogin('claire@seniorlink.fr','test1234')">
+                        <span class="tb-role role-aidant">Aidant</span>
+                        <div class="tb-name">👩 Claire Dupont</div>
+                        <div class="tb-info">claire@seniorlink.fr · test1234</div>
+                    </button>
+                    <button class="test-btn" onclick="fillLogin('thomas@seniorlink.fr','test1234')">
+                        <span class="tb-role role-aidant">Aidant</span>
+                        <div class="tb-name">👨 Thomas Martin</div>
+                        <div class="tb-info">thomas@seniorlink.fr · test1234</div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -461,7 +472,7 @@
 
         <!-- Topbar -->
         <div class="senior-topbar">
-            <div class="stb-logo"><div class="stb-logo-dot"></div>SeniorLApp</div>
+            <div class="stb-logo"><div class="stb-logo-dot"></div>SeniorLink</div>
             <div class="stb-clock" id="s-clock">—</div>
             <div class="stb-right">
                 <div class="stb-user" id="s-user-name"></div>
@@ -568,7 +579,7 @@
     <div id="screen-app" class="screen">
         <div class="topbar">
             <div class="topbar-left">
-                <div class="topbar-logo">Senior<em>Link</em> 🤍</div>
+                <div class="topbar-logo">Senior<em>App</em> 🤍</div>
                 <div class="topbar-page" id="topbar-page">Accueil</div>
                 <div class="live-dot">En direct</div>
             </div>
