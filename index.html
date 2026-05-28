@@ -21,14 +21,10 @@
             --sh:0 4px 20px rgba(58,82,73,0.1);
         }
 
-        /* ══ APP SHELL ══ */
         #app{height:100vh;display:flex;flex-direction:column;overflow:hidden}
         .screen{display:none;flex:1;overflow:hidden;flex-direction:column}
         .screen.active{display:flex}
 
-        /* ════════════════════════════════
-           LOGIN
-        ════════════════════════════════ */
         #screen-login{
             overflow-y:auto !important;
             background:linear-gradient(160deg,#e8f4ff 0%,#f5f9ff 40%,#eef6f0 100%);
@@ -62,23 +58,12 @@
         .role-senior{background:var(--sage-p);color:var(--sage-d)}
         .role-aidant{background:var(--amber-p);color:var(--amber)}
 
-        /* ════════════════════════════════
-           SENIOR SCREEN - GRAND ÉCRAN
-        ════════════════════════════════ */
-        #screen-senior{
-            background:linear-gradient(160deg,#e8f4ff 0%,#f5f9ff 40%,#eef6f0 100%);
-            position:relative;overflow:hidden;
-        }
+        #screen-senior{background:linear-gradient(160deg,#e8f4ff 0%,#f5f9ff 40%,#eef6f0 100%);position:relative;overflow:hidden}
         .bg-circle{position:absolute;border-radius:50%;pointer-events:none}
         .bc1{width:600px;height:600px;top:-250px;right:-200px;background:radial-gradient(circle,rgba(91,123,111,0.07) 0%,transparent 70%)}
         .bc2{width:500px;height:500px;bottom:-200px;left:-150px;background:radial-gradient(circle,rgba(59,191,122,0.07) 0%,transparent 70%)}
 
-        /* Senior topbar */
-        .senior-topbar{
-            position:relative;z-index:2;
-            display:flex;align-items:center;justify-content:space-between;
-            padding:2rem 4rem 0;flex-shrink:0;
-        }
+        .senior-topbar{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:2rem 4rem 0;flex-shrink:0}
         .stb-logo{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:600;color:var(--sage-d);display:flex;align-items:center;gap:8px}
         .stb-logo-dot{width:10px;height:10px;border-radius:50%;background:var(--green)}
         .stb-clock{background:white;border:1px solid var(--border);border-radius:50px;padding:0.5rem 1.25rem;font-size:0.88rem;color:var(--text-m);font-weight:500;box-shadow:0 2px 12px rgba(0,0,0,0.05)}
@@ -87,13 +72,8 @@
         .btn-logout-sm{background:transparent;border:1px solid var(--border);border-radius:50px;padding:0.4rem 1rem;font-size:0.78rem;cursor:pointer;color:var(--text-l);font-family:'Plus Jakarta Sans',sans-serif;transition:all 0.18s}
         .btn-logout-sm:hover{background:var(--red-p);color:var(--red-d);border-color:var(--red-d)}
 
-        /* Senior main content */
-        .senior-main{
-            flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
-            padding:2rem 4rem;gap:2.5rem;position:relative;z-index:2;
-        }
+        .senior-main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 4rem;gap:2.5rem;position:relative;z-index:2}
 
-        /* Question */
         .question-block{text-align:center}
         .q-label{font-size:0.95rem;color:var(--sage);font-weight:600;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:0.75rem;display:flex;align-items:center;justify-content:center;gap:10px}
         .q-label::before,.q-label::after{content:'';width:40px;height:1px;background:rgba(91,123,111,0.3)}
@@ -101,78 +81,41 @@
         .q-title em{font-style:normal;color:var(--sage-d)}
         .q-sub{font-size:1.1rem;color:var(--text-l);margin-top:0.75rem}
 
-        /* Already done banner */
-        .done-top-banner{
-            background:var(--green-p);border:1.5px solid rgba(59,191,122,0.4);
-            border-radius:20px;padding:1.25rem 2rem;
-            display:flex;align-items:center;gap:1rem;width:100%;max-width:700px;
-            display:none;
-        }
+        .done-top-banner{background:var(--green-p);border:1.5px solid rgba(59,191,122,0.4);border-radius:20px;padding:1.25rem 2rem;display:flex;align-items:center;gap:1rem;width:100%;max-width:700px;display:none}
         .dtb-icon{font-size:1.8rem}
         .dtb-title{font-size:1rem;font-weight:600;color:var(--green-d)}
         .dtb-sub{font-size:0.82rem;color:var(--green-d);opacity:0.8;margin-top:2px}
 
-        /* Buttons */
         .senior-btns{display:flex;gap:2.5rem;width:100%;max-width:900px}
-        .s-btn{
-            flex:1;border:none;border-radius:32px;cursor:pointer;
-            display:flex;flex-direction:column;align-items:center;justify-content:center;
-            gap:1rem;padding:2.5rem 2rem;font-family:'Nunito',sans-serif;
-            transition:transform 0.18s cubic-bezier(.34,1.56,.64,1),box-shadow 0.18s,opacity 0.2s;
-            position:relative;overflow:hidden;min-height:270px;
-            -webkit-tap-highlight-color:transparent;
-        }
+        .s-btn{flex:1;border:none;border-radius:32px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:2.5rem 2rem;font-family:'Nunito',sans-serif;transition:transform 0.18s cubic-bezier(.34,1.56,.64,1),box-shadow 0.18s,opacity 0.2s;position:relative;overflow:hidden;min-height:270px;-webkit-tap-highlight-color:transparent}
         .s-btn::after{content:'';position:absolute;inset:0;border-radius:32px;background:rgba(255,255,255,0.12) inset;pointer-events:none}
         .s-btn:hover{transform:translateY(-8px)}
         .s-btn:active{transform:scale(0.95) !important}
         .s-btn.disabled{opacity:0.45;cursor:not-allowed;pointer-events:none}
-
-        /* OUI button */
-        .btn-oui{
-            background:linear-gradient(145deg,#2ECC71,#1aab57);
-            box-shadow:0 14px 45px rgba(39,174,96,0.38),0 0 0 1px rgba(255,255,255,0.15) inset;
-        }
+        .btn-oui{background:linear-gradient(145deg,#2ECC71,#1aab57);box-shadow:0 14px 45px rgba(39,174,96,0.38),0 0 0 1px rgba(255,255,255,0.15) inset}
         .btn-oui:hover{box-shadow:0 22px 55px rgba(39,174,96,0.48),0 0 0 1px rgba(255,255,255,0.15) inset}
         @keyframes pulse-oui{0%,100%{box-shadow:0 14px 45px rgba(39,174,96,0.38),0 0 0 0 rgba(39,174,96,0.3),0 0 0 1px rgba(255,255,255,0.15) inset}60%{box-shadow:0 14px 45px rgba(39,174,96,0.38),0 0 0 22px rgba(39,174,96,0),0 0 0 1px rgba(255,255,255,0.15) inset}}
         .btn-oui:not(.disabled){animation:pulse-oui 2.5s ease-in-out infinite}
         .btn-oui:hover{animation:none}
-
-        /* NON button */
-        .btn-non{
-            background:linear-gradient(145deg,#E74C3C,#c0392b);
-            box-shadow:0 14px 45px rgba(192,57,43,0.35),0 0 0 1px rgba(255,255,255,0.15) inset;
-        }
+        .btn-non{background:linear-gradient(145deg,#E74C3C,#c0392b);box-shadow:0 14px 45px rgba(192,57,43,0.35),0 0 0 1px rgba(255,255,255,0.15) inset}
         .btn-non:hover{box-shadow:0 22px 55px rgba(192,57,43,0.45),0 0 0 1px rgba(255,255,255,0.15) inset}
-
         .s-btn-emoji{font-size:4rem;line-height:1;filter:drop-shadow(0 3px 8px rgba(0,0,0,0.12))}
         .s-btn-main{font-size:clamp(2.5rem,4.5vw,3.5rem);font-weight:900;color:white;letter-spacing:-0.01em;line-height:1;text-shadow:0 2px 10px rgba(0,0,0,0.12)}
         .s-btn-sub{font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;font-weight:500;color:rgba(255,255,255,0.85);line-height:1.4;text-align:center}
 
-        /* Senior footer */
-        .senior-footer{
-            position:relative;z-index:2;flex-shrink:0;
-            padding:0 4rem 2rem;display:flex;align-items:center;justify-content:center;gap:2.5rem;
-        }
+        .senior-footer{position:relative;z-index:2;flex-shrink:0;padding:0 4rem 2rem;display:flex;align-items:center;justify-content:center;gap:2.5rem}
         .sf-item{display:flex;align-items:center;gap:7px;font-size:0.85rem;color:var(--text-l)}
         .sf-sep{width:1px;height:18px;background:var(--border2)}
 
-        /* Tabs (senior nav) */
-        .senior-tabs{
-            position:relative;z-index:2;flex-shrink:0;
-            display:flex;border-top:1px solid var(--border);background:white;
-        }
+        .senior-tabs{position:relative;z-index:2;flex-shrink:0;display:flex;border-top:1px solid var(--border);background:white}
         .s-tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:0.75rem;cursor:pointer;border:none;background:transparent;transition:background 0.15s;font-family:'Plus Jakarta Sans',sans-serif;color:var(--text-l);font-size:0.68rem;font-weight:500}
         .s-tab:hover{background:var(--sage-p)}
         .s-tab.active{color:var(--sage-d);background:var(--sage-p)}
         .s-tab .ti{font-size:1.3rem}
 
-        /* Senior sub-views */
         .senior-view{display:none;flex:1;overflow-y:auto;padding:2rem 4rem;position:relative;z-index:2}
         .senior-view.active{display:block}
 
-        /* ════════════════════════════════
-           APP AIDANT
-        ════════════════════════════════ */
         #screen-app{background:var(--cream)}
         .topbar{background:white;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;flex-shrink:0;box-shadow:0 2px 12px rgba(0,0,0,0.04)}
         .topbar-left{display:flex;align-items:center;gap:1rem}
@@ -208,14 +151,12 @@
         .view.active{display:block;animation:fadeUp 0.2s ease}
         @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-        /* Page titles */
         .page-title{margin-bottom:2rem}
         .page-title h2{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;margin-bottom:4px}
         .page-title p{font-size:0.85rem;color:var(--text-l)}
         .page-title-row{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:2rem}
         .page-title-row .page-title{margin-bottom:0}
 
-        /* ── Stat cards ── */
         .dash-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-bottom:2rem}
         .stat-card{background:white;border-radius:18px;padding:1.4rem;border:1px solid var(--border);display:flex;align-items:center;gap:1rem;transition:box-shadow 0.2s}
         .stat-card:hover{box-shadow:var(--sh)}
@@ -224,7 +165,6 @@
         .stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;line-height:1}
         .stat-lbl{font-size:0.75rem;color:var(--text-l);margin-top:2px}
 
-        /* ── Panels ── */
         .dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
         .panel{background:white;border-radius:18px;border:1px solid var(--border);overflow:hidden}
         .panel-header{padding:1.1rem 1.4rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
@@ -232,7 +172,6 @@
         .panel-body{padding:0.4rem}
         .panel-full{grid-column:1/-1}
 
-        /* ── Senior rows ── */
         .senior-row{display:flex;align-items:center;gap:1rem;padding:0.8rem 1rem;border-radius:12px;cursor:pointer;transition:background 0.15s;margin:2px 0}
         .senior-row:hover{background:var(--sage-p)}
         .sr-avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;border:2px solid}
@@ -243,7 +182,6 @@
         .sr-badge{font-size:0.7rem;font-weight:600;padding:4px 12px;border-radius:50px;white-space:nowrap;flex-shrink:0}
         .b-ok{background:var(--green-p);color:var(--green-d)}.b-wait{background:var(--orange-p);color:#7a4a00}.b-alert{background:var(--red-p);color:var(--red-d)}.b-non{background:#fff0f0;color:#c0392b}
 
-        /* ── Alert rows ── */
         .alert-row{display:flex;align-items:flex-start;gap:1rem;padding:0.85rem 1rem;border-radius:12px;background:var(--red-p);margin:4px 0;border:1px solid rgba(226,75,74,0.2)}
         .alert-row.non{background:#fff0f0;border-color:rgba(192,57,43,0.3)}
         .ar-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px}
@@ -255,7 +193,6 @@
         .btn-resolve{background:transparent;color:var(--red-d);border:1px solid var(--red-d);border-radius:50px;padding:5px 14px;font-size:0.75rem;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;transition:all 0.15s}
         .btn-resolve:hover{background:var(--red-d);color:white}
 
-        /* ── Response feed ── */
         .feed-item{display:flex;align-items:flex-start;gap:0.85rem;padding:0.85rem 1rem;border-radius:12px;margin:4px 0;border:1px solid var(--border);background:white;transition:box-shadow 0.15s}
         .feed-item:hover{box-shadow:var(--sh)}
         .feed-avatar{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;border:2px solid}
@@ -266,7 +203,6 @@
         .fi-time{font-size:0.72rem;color:var(--text-l);margin-left:auto}
         .fi-msg{font-size:0.78rem;color:var(--text-m)}
 
-        /* ── Proches ── */
         .contacts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
         .contact-card{background:white;border-radius:18px;border:1px solid var(--border);padding:1.5rem;text-align:center;transition:all 0.2s;cursor:pointer}
         .contact-card:hover{box-shadow:var(--sh);border-color:var(--sage-l);transform:translateY(-2px)}
@@ -283,7 +219,6 @@
         .add-ico{font-size:2rem;color:var(--sage-l)}
         .add-lbl{font-size:0.85rem;color:var(--text-m);font-weight:500}
 
-        /* ── Profil détail ── */
         .profile-header{background:white;border-radius:18px;padding:2rem;border:1px solid var(--border);margin-bottom:1.5rem;display:flex;align-items:center;gap:2rem}
         .ph-avatar{width:80px;height:80px;border-radius:50%;background:var(--sage-p);display:flex;align-items:center;justify-content:center;font-size:2.2rem;flex-shrink:0;border:3px solid var(--sage-l)}
         .ph-info h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600}
@@ -294,7 +229,6 @@
         .phs-num{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--sage-d)}
         .phs-lbl{font-size:0.7rem;color:var(--text-l);margin-top:2px}
 
-        /* ── Calendar ── */
         .calendar-wrap{background:white;border-radius:18px;padding:1.5rem;border:1px solid var(--border);margin-bottom:1.5rem}
         .cal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.1rem}
         .cal-nav{background:transparent;border:1px solid var(--border);border-radius:50%;width:32px;height:32px;cursor:pointer;font-size:0.9rem;display:flex;align-items:center;justify-content:center;transition:background 0.15s}
@@ -306,7 +240,6 @@
         .cal-cell{aspect-ratio:1;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:500}
         .cc-ok{background:var(--green-p);color:var(--green-d)}.cc-miss{background:var(--red-p);color:var(--red-d)}.cc-today{background:var(--sage-d);color:white}.cc-empty{color:var(--text-l);opacity:0.3}.cc-future{background:var(--sage-p);color:var(--text-l)}
 
-        /* ── History ── */
         .history-list{background:white;border-radius:18px;border:1px solid var(--border);overflow:hidden}
         .history-item{display:flex;align-items:center;gap:1rem;padding:0.85rem 1.4rem;border-bottom:1px solid var(--border);transition:background 0.15s}
         .history-item:last-child{border-bottom:none}
@@ -317,7 +250,6 @@
         .hi-response{font-size:0.7rem;font-weight:600;margin-right:4px}
         .hi-badge{font-size:0.7rem;padding:3px 10px;border-radius:50px;font-weight:600}
 
-        /* ── Alertes ── */
         .alerts-filters{display:flex;gap:8px;margin-bottom:1.5rem;flex-wrap:wrap}
         .filter-btn{padding:6px 18px;border-radius:50px;border:1px solid var(--border);background:white;font-size:0.8rem;cursor:pointer;color:var(--text-m);font-family:'Plus Jakarta Sans',sans-serif;transition:all 0.18s;font-weight:500}
         .filter-btn.on{background:var(--sage-d);color:white;border-color:var(--sage-d)}
@@ -339,7 +271,6 @@
         .btn-ac-ok{background:transparent;color:var(--sage-d);border:1px solid var(--sage-d);border-radius:50px;padding:6px 18px;font-size:0.78rem;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-weight:500;transition:all 0.15s}
         .btn-ac-ok:hover{background:var(--sage-d);color:white}
 
-        /* ── Paramètres ── */
         .settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
         .settings-panel{background:white;border-radius:18px;border:1px solid var(--border);overflow:hidden}
         .settings-panel h3{padding:1.1rem 1.4rem;border-bottom:1px solid var(--border);font-weight:500;font-size:0.92rem;display:flex;align-items:center;gap:8px;color:var(--text-m)}
@@ -355,7 +286,6 @@
         .toggle.on::after{left:23px}.toggle.off::after{left:3px}
         .settings-full{grid-column:1/-1}
 
-        /* ══ OVERLAYS SENIOR ══ */
         .s-overlay{display:none;position:fixed;inset:0;z-index:200;align-items:center;justify-content:center;backdrop-filter:blur(8px)}
         .s-overlay.show{display:flex}
         .ov-oui{background:rgba(39,174,96,0.12)}
@@ -374,7 +304,6 @@
         .ov-btn-non{background:#c0392b;color:white}
         .ov-btn-non:hover{background:#E74C3C;transform:translateY(-2px)}
 
-        /* ══ MODAL ══ */
         .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:300;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
         .modal-overlay.open{display:flex}
         .modal{background:white;border-radius:28px;padding:2.5rem;width:100%;max-width:480px;box-shadow:0 24px 60px rgba(0,0,0,0.18);animation:popIn 0.25s ease}
@@ -386,37 +315,86 @@
         .btn-modal-confirm{flex:2;background:var(--sage-d);color:white;border:none;border-radius:50px;padding:0.75rem;font-size:0.88rem;cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif;font-weight:600;transition:all 0.15s}
         .btn-modal-confirm:hover{background:var(--sage)}
 
-        /* ══ TOAST ══ */
         .toast{position:fixed;bottom:2rem;right:2rem;z-index:400;background:var(--sage-d);color:white;padding:0.9rem 1.6rem;border-radius:16px;font-size:0.88rem;font-weight:500;transform:translateY(100px);opacity:0;transition:all 0.3s ease;box-shadow:0 8px 30px rgba(0,0,0,0.2);pointer-events:none;max-width:360px;line-height:1.4}
         .toast.show{transform:translateY(0);opacity:1}
         .toast.error{background:var(--red-d)}
         .toast.warning{background:#c0392b}
 
-        /* ══ EMPTY STATE ══ */
         .empty-state{text-align:center;padding:3rem;color:var(--text-l)}
         .empty-state .es-icon{font-size:2.5rem;margin-bottom:0.75rem}
         .empty-state p{font-size:0.88rem}
 
-        /* ══ LIVE INDICATOR ══ */
         .live-dot{display:inline-flex;align-items:center;gap:5px;font-size:0.72rem;color:var(--green-d);font-weight:600;background:var(--green-p);padding:3px 10px;border-radius:50px}
         .live-dot::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--green);animation:blink 1.5s ease-in-out infinite}
         @keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
 
         /* ══ RESPONSIVE ══ */
-        @media(max-width:900px){
+        @media(max-width:1024px){
             .dash-stats{grid-template-columns:1fr 1fr}
-            .dash-grid{grid-template-columns:1fr}
-            .contacts-grid{grid-template-columns:1fr 1fr}
+            .sidebar{width:190px}
+            .senior-topbar{padding:1.5rem 2rem 0}
             .senior-main{padding:1.5rem 2rem;gap:2rem}
             .senior-btns{gap:1.5rem}
-            .s-btn{min-height:210px;padding:2rem 1.5rem;border-radius:24px}
-            .senior-topbar,.senior-footer{padding-left:2rem;padding-right:2rem}
+            .s-btn{min-height:220px;padding:2rem 1.5rem;border-radius:24px}
+            .senior-footer{padding:0 2rem 1.5rem}
             .senior-view{padding:1.5rem 2rem}
+            .content{padding:1.5rem}
         }
-        @media(max-width:600px){
-            .senior-btns{flex-direction:column}
-            .contacts-grid{grid-template-columns:1fr}
+        @media(max-width:768px){
+            /* Login */
+            #screen-login{justify-content:flex-start;padding-top:1.5rem}
+            .login-wrap{padding:1rem}
+            .login-logo h1{font-size:2rem}
+            .login-logo .ico{width:64px;height:64px;font-size:1.8rem}
+            /* Sidebar → barre du bas */
+            .main-layout{flex-direction:column}
+            .sidebar{width:100%;height:auto;border-right:none;border-top:1px solid var(--border);flex-direction:row;padding:0;order:2;flex-shrink:0}
+            .sidebar-section,.sidebar-spacer,.sidebar-user{display:none}
+            #nav-items{display:flex;flex-direction:row;width:100%}
+            .nav-item{flex-direction:column;gap:2px;padding:0.6rem 0.5rem;border-left:none;border-top:3px solid transparent;font-size:0.6rem;flex:1;justify-content:center;text-align:center}
+            .nav-item.active{border-top-color:var(--sage-d);border-left:none}
+            .nav-item .ni-icon{font-size:1.2rem;width:auto}
+            .nav-badge{position:static;margin-top:1px;font-size:0.52rem}
+            .content{order:1;padding:1rem}
+            /* Topbar */
+            .topbar{padding:0.6rem 1rem}
+            .topbar-page,.live-dot,.user-name,.user-role-badge{display:none}
+            .user-pill{padding:0.35rem}
+            /* Stats */
+            .dash-stats{grid-template-columns:1fr 1fr;gap:0.75rem}
+            .stat-card{padding:1rem}
+            .stat-icon{width:38px;height:38px;font-size:1.1rem}
+            .stat-num{font-size:1.6rem}
+            .dash-grid{grid-template-columns:1fr}
+            /* Contacts */
+            .contacts-grid{grid-template-columns:1fr 1fr;gap:0.75rem}
+            .contact-card{padding:1rem}
+            /* Paramètres */
             .settings-grid{grid-template-columns:1fr}
+            /* Profil */
+            .profile-header{flex-direction:column;align-items:flex-start;gap:1rem}
+            .ph-stats{width:100%;margin-left:0}
+            /* Senior */
+            .senior-topbar{padding:1rem 1rem 0;flex-wrap:wrap;gap:0.5rem}
+            .senior-main{padding:1rem;gap:1.5rem}
+            .senior-btns{gap:1rem;max-width:100%}
+            .s-btn{min-height:190px;padding:1.5rem 1rem;border-radius:20px}
+            .s-btn-main{font-size:2.2rem}
+            .s-btn-emoji{font-size:2.5rem}
+            .q-title{font-size:2.5rem}
+            .senior-footer{padding:0 1rem 1rem;gap:1rem;flex-wrap:wrap;justify-content:center;font-size:0.78rem}
+            .senior-view{padding:1rem}
+            .s-tab{font-size:0.62rem;padding:0.6rem 0.4rem}
+            /* Overlay */
+            .ov-card{padding:2.5rem 1.5rem;border-radius:24px}
+            .ov-icon{font-size:4rem}
+            .ov-title{font-size:2rem}
+        }
+        @media(max-width:480px){
+            .senior-btns{flex-direction:column}
+            .s-btn{min-height:130px;flex-direction:row;justify-content:flex-start;padding:1.2rem 1.5rem;gap:1.25rem;border-radius:18px}
+            .contacts-grid{grid-template-columns:1fr}
+            .login-wrap{padding:0.75rem}
         }
     </style>
 </head>
@@ -440,22 +418,22 @@
                 <button class="btn-primary" onclick="doLogin()">Se connecter</button>
                 <div class="test-accounts">
                     <h3>Comptes de test</h3>
-                    <button class="test-btn" onclick="fillLogin('madeleine@seniorlink.fr','test1234')">
+                    <button class="test-btn" onclick="fillLogin(0)">
                         <span class="tb-role role-senior">Senior</span>
                         <div class="tb-name">👵 Madeleine Dupont</div>
                         <div class="tb-info">madeleine@seniorlink.fr · test1234</div>
                     </button>
-                    <button class="test-btn" onclick="fillLogin('roger@seniorlink.fr','test1234')">
+                    <button class="test-btn" onclick="fillLogin(1)">
                         <span class="tb-role role-senior">Senior</span>
                         <div class="tb-name">👴 Roger Martin</div>
                         <div class="tb-info">roger@seniorlink.fr · test1234</div>
                     </button>
-                    <button class="test-btn" onclick="fillLogin('claire@seniorlink.fr','test1234')">
+                    <button class="test-btn" onclick="fillLogin(2)">
                         <span class="tb-role role-aidant">Aidant</span>
                         <div class="tb-name">👩 Claire Dupont</div>
                         <div class="tb-info">claire@seniorlink.fr · test1234</div>
                     </button>
-                    <button class="test-btn" onclick="fillLogin('thomas@seniorlink.fr','test1234')">
+                    <button class="test-btn" onclick="fillLogin(3)">
                         <span class="tb-role role-aidant">Aidant</span>
                         <div class="tb-name">👨 Thomas Martin</div>
                         <div class="tb-info">thomas@seniorlink.fr · test1234</div>
@@ -469,8 +447,6 @@
     <div id="screen-senior" class="screen">
         <div class="bg-circle bc1"></div>
         <div class="bg-circle bc2"></div>
-
-        <!-- Topbar -->
         <div class="senior-topbar">
             <div class="stb-logo"><div class="stb-logo-dot"></div>SeniorLink</div>
             <div class="stb-clock" id="s-clock">—</div>
@@ -479,11 +455,8 @@
                 <button class="btn-logout-sm" onclick="doLogout()">Déconnexion</button>
             </div>
         </div>
-
-        <!-- Main check-in view -->
         <div id="senior-checkin-view" style="display:flex;flex-direction:column;flex:1;overflow:hidden">
             <div class="senior-main">
-                <!-- Banner si déjà fait -->
                 <div class="done-top-banner" id="done-banner">
                     <div class="dtb-icon">✅</div>
                     <div>
@@ -491,15 +464,11 @@
                         <div class="dtb-sub" id="done-banner-time">Votre famille a été informée.</div>
                     </div>
                 </div>
-
-                <!-- Question -->
                 <div class="question-block">
                     <div class="q-label" id="s-greeting">Bonjour</div>
                     <div class="q-title">Tout va<br><em>bien aujourd'hui ?</em></div>
                     <div class="q-sub">Appuyez simplement sur votre réponse</div>
                 </div>
-
-                <!-- Boutons -->
                 <div class="senior-btns">
                     <button class="s-btn btn-oui" id="btn-oui" onclick="doOui()">
                         <div class="s-btn-emoji">😊</div>
@@ -513,8 +482,6 @@
                     </button>
                 </div>
             </div>
-
-            <!-- Footer -->
             <div class="senior-footer">
                 <div class="sf-item">📅 Un geste quotidien qui rassure</div>
                 <div class="sf-sep"></div>
@@ -523,15 +490,11 @@
                 <div class="sf-item">👨‍👩‍👧 Famille informée en temps réel</div>
             </div>
         </div>
-
-        <!-- Tab bar -->
         <div class="senior-tabs">
             <button class="s-tab active" onclick="seniorTab('checkin',this)"><div class="ti">🏠</div>Accueil</button>
             <button class="s-tab" onclick="seniorTab('historique',this)"><div class="ti">📅</div>Historique</button>
             <button class="s-tab" onclick="seniorTab('parametres',this)"><div class="ti">⚙️</div>Paramètres</button>
         </div>
-
-        <!-- Historique view -->
         <div class="senior-view" id="senior-view-historique">
             <div class="page-title"><h2>Mon historique</h2><p>Tous vos check-ins enregistrés</p></div>
             <div class="calendar-wrap">
@@ -545,15 +508,12 @@
             </div>
             <div class="history-list" id="s-history-list"></div>
         </div>
-
-        <!-- Paramètres senior -->
         <div class="senior-view" id="senior-view-parametres">
             <div class="page-title"><h2>Paramètres</h2><p>Configurez votre expérience</p></div>
             <div class="settings-grid" id="s-settings-content"></div>
         </div>
     </div>
 
-    <!-- OUI overlay -->
     <div class="s-overlay ov-oui" id="ov-oui">
         <div class="ov-card">
             <span class="ov-icon">✅</span>
@@ -563,8 +523,6 @@
             <button class="ov-btn ov-btn-ok" onclick="closeOv('ov-oui')">Fermer</button>
         </div>
     </div>
-
-    <!-- NON overlay -->
     <div class="s-overlay ov-non" id="ov-non">
         <div class="ov-card">
             <span class="ov-icon">🆘</span>
@@ -595,7 +553,6 @@
                 <button class="btn-logout" onclick="doLogout()">Déconnexion</button>
             </div>
         </div>
-
         <div class="main-layout">
             <div class="sidebar" id="sidebar">
                 <div class="sidebar-section">Navigation</div>
@@ -606,10 +563,7 @@
                     <div class="su-email" id="sidebar-email">claire@seniorlink.fr</div>
                 </div>
             </div>
-
             <div class="content" id="main-content">
-
-                <!-- DASHBOARD -->
                 <div class="view" id="view-dashboard">
                     <div class="page-title-row">
                         <div class="page-title"><h2 id="dash-greeting">Bonjour 👋</h2><p id="dash-date"></p></div>
@@ -630,8 +584,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- PROCHES -->
                 <div class="view" id="view-proches">
                     <div class="page-title-row">
                         <div class="page-title"><h2>Mes proches</h2><p>Personnes que vous suivez</p></div>
@@ -639,8 +591,6 @@
                     </div>
                     <div class="contacts-grid" id="contacts-grid"></div>
                 </div>
-
-                <!-- PROFIL DETAIL -->
                 <div class="view" id="view-profil-detail">
                     <button style="background:transparent;border:none;cursor:pointer;color:var(--sage);font-size:0.88rem;margin-bottom:1.25rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:500" onclick="navTo('proches')">← Retour à mes proches</button>
                     <div class="profile-header" id="detail-profile-header"></div>
@@ -655,8 +605,6 @@
                     </div>
                     <div class="history-list" id="detail-history-list"></div>
                 </div>
-
-                <!-- ALERTES -->
                 <div class="view" id="view-alertes">
                     <div class="page-title"><h2>Alertes</h2><p id="alerts-count-lbl">Notifications</p></div>
                     <div class="alerts-filters">
@@ -668,18 +616,14 @@
                     </div>
                     <div id="alerts-list"></div>
                 </div>
-
-                <!-- PARAMÈTRES AIDANT -->
                 <div class="view" id="view-parametres">
                     <div class="page-title"><h2>Paramètres</h2><p>Configurez votre expérience</p></div>
                     <div class="settings-grid" id="settings-content"></div>
                 </div>
-
             </div>
         </div>
     </div>
 
-    <!-- Modal ajout contact -->
     <div class="modal-overlay" id="modal-add-contact">
         <div class="modal">
             <h3>Ajouter un proche</h3>
@@ -694,547 +638,78 @@
             </div>
         </div>
     </div>
-
     <div class="toast" id="toast"></div>
-</div><!-- /app -->
+</div>
 
 <script>
-    // ════════════════════════════════
-    // DONNÉES
-    // ════════════════════════════════
-    const TODAY = new Date(2026,3,1); // 1er avril 2026
-
+    const TODAY = new Date(2026,3,1);
     const USERS = {
         'madeleine@seniorlink.fr':{pass:'test1234',role:'senior',prenom:'Madeleine',nom:'Dupont',age:78,ville:'Lyon',emoji:'👵',initiales:'MD',streak:8,monthCheckins:27,monthTotal:30,lastCheckin:{date:'Hier',time:'08h52'}},
         'roger@seniorlink.fr':{pass:'test1234',role:'senior',prenom:'Roger',nom:'Martin',age:82,ville:'Bordeaux',emoji:'👴',initiales:'RM',streak:5,monthCheckins:24,monthTotal:30,lastCheckin:{date:'Hier',time:'09h05'}},
         'claire@seniorlink.fr':{pass:'test1234',role:'aidant',prenom:'Claire',nom:'Dupont',initiales:'CD',seniors:['madeleine@seniorlink.fr','roger@seniorlink.fr','suzanne@seniorlink.fr','henri@seniorlink.fr']},
         'thomas@seniorlink.fr':{pass:'test1234',role:'aidant',prenom:'Thomas',nom:'Martin',initiales:'TM',seniors:['roger@seniorlink.fr','madeleine@seniorlink.fr']}
     };
-
-    // Données seniors partagées (mutables — les réponses se propagent)
     const SD = {
         'madeleine@seniorlink.fr':{prenom:'Madeleine',nom:'Dupont',age:78,ville:'Lyon',emoji:'👵',reponse:null,reponseTime:null,streak:8,monthCheckins:27,monthTotal:30,history:genHistory('s1'),contact:'06 12 34 56 78'},
         'roger@seniorlink.fr':{prenom:'Roger',nom:'Martin',age:82,ville:'Bordeaux',emoji:'👴',reponse:'oui',reponseTime:'09h12',streak:5,monthCheckins:24,monthTotal:30,history:genHistory('s2'),contact:'06 98 76 54 32'},
         'suzanne@seniorlink.fr':{prenom:'Suzanne',nom:'Bernard',age:75,ville:'Paris',emoji:'👩‍🦳',reponse:null,reponseTime:null,streak:3,monthCheckins:22,monthTotal:30,history:genHistory('s3'),contact:'06 11 22 33 44',attente:true},
         'henri@seniorlink.fr':{prenom:'Henri',nom:'Lecomte',age:80,ville:'Marseille',emoji:'👴',reponse:null,reponseTime:null,streak:0,monthCheckins:18,monthTotal:30,history:genHistory('s4'),contact:'06 55 44 33 22',alerte:true}
     };
-
-    // Flux d'alertes
     let ALERTS = [
         {id:1,type:'urgent',email:'henri@seniorlink.fr',name:'Henri Lecomte',time:'11h30',msg:"Henri n'a pas effectué son check-in depuis plus de 3 heures. Délai dépassé. Veuillez vérifier.",resolved:false},
         {id:2,type:'info',email:'roger@seniorlink.fr',name:'Roger Martin',time:'09h12',msg:"Roger Martin a confirmé qu'il allait bien. Check-in enregistré à 09h12.",resolved:false},
         {id:3,type:'info',email:'suzanne@seniorlink.fr',name:'Suzanne Bernard',time:'10h00',msg:"Suzanne Bernard n'a pas encore répondu. Rappel automatique envoyé.",resolved:false},
     ];
+    function genHistory(seed){const h=[];for(let i=0;i<30;i++){const d=new Date(TODAY);d.setDate(d.getDate()-i);const skip=(i===0&&(seed==='s1'||seed==='s3'||seed==='s4'));const ok=skip?false:(seed==='s4'?(i>3&&Math.random()>0.35):(Math.random()>0.1));const rep=ok?'oui':(Math.random()>0.7?'non':null);h.push({date:new Date(d),ok,rep,time:ok?`0${7+Math.floor(Math.random()*3)}h${Math.floor(Math.random()*59).toString().padStart(2,'0')}`:null});}return h;}
+    let currentUser=null,currentView='',calMonth=new Date(TODAY),detailCalMonth=new Date(TODAY),currentDetailSenior=null,alertFilter='all',seniorCalMonth=new Date(TODAY);
 
-    function genHistory(seed){
-        const h=[];
-        for(let i=0;i<30;i++){
-            const d=new Date(TODAY); d.setDate(d.getDate()-i);
-            const skip=(i===0&&(seed==='s1'||seed==='s3'||seed==='s4'));
-            const ok=skip?false:(seed==='s4'?(i>3&&Math.random()>0.35):(Math.random()>0.1));
-            const rep=ok?(Math.random()>0.1?'oui':'oui'):(Math.random()>0.7?'non':null);
-            h.push({date:new Date(d),ok,rep,time:ok?`0${7+Math.floor(Math.random()*3)}h${Math.floor(Math.random()*59).toString().padStart(2,'0')}`:null});
-        }
-        return h;
-    }
+    function fillLogin(idx){const a=[['madeleine@seniorlink.fr','test1234'],['roger@seniorlink.fr','test1234'],['claire@seniorlink.fr','test1234'],['thomas@seniorlink.fr','test1234']];document.getElementById('login-email').value=a[idx][0];document.getElementById('login-pass').value=a[idx][1];}
+    function doLogin(){const email=document.getElementById('login-email').value.trim().toLowerCase();const pass=document.getElementById('login-pass').value;const u=USERS[email];if(!u||u.pass!==pass){document.getElementById('login-error').style.display='block';return;}document.getElementById('login-error').style.display='none';currentUser={...u,email};initApp();}
+    function doLogout(){currentUser=null;['screen-login','screen-senior','screen-app'].forEach(id=>document.getElementById(id).classList.remove('active'));document.getElementById('screen-login').classList.add('active');document.getElementById('login-email').value='';document.getElementById('login-pass').value='';}
+    function initApp(){['screen-login','screen-senior','screen-app'].forEach(id=>document.getElementById(id).classList.remove('active'));if(currentUser.role==='senior'){document.getElementById('screen-senior').classList.add('active');initSenior();}else{document.getElementById('screen-app').classList.add('active');initAidant();}}
 
-    // ════════════════════════════════
-    // STATE
-    // ════════════════════════════════
-    let currentUser=null;
-    let currentView='';
-    let calMonth=new Date(TODAY);
-    let detailCalMonth=new Date(TODAY);
-    let currentDetailSenior=null;
-    let alertFilter='all';
-    let seniorCalMonth=new Date(TODAY);
-
-    // ════════════════════════════════
-    // AUTH
-    // ════════════════════════════════
-    function fillLogin(e,p){document.getElementById('login-email').value=e;document.getElementById('login-pass').value=p;}
-
-    function doLogin(){
-        const email=document.getElementById('login-email').value.trim().toLowerCase();
-        const pass=document.getElementById('login-pass').value;
-        const u=USERS[email];
-        if(!u||u.pass!==pass){document.getElementById('login-error').style.display='block';return;}
-        document.getElementById('login-error').style.display='none';
-        currentUser={...u,email};
-        initApp();
-    }
-
-    function doLogout(){
-        currentUser=null;
-        ['screen-login','screen-senior','screen-app'].forEach(id=>document.getElementById(id).classList.remove('active'));
-        document.getElementById('screen-login').classList.add('active');
-        document.getElementById('login-email').value='';
-        document.getElementById('login-pass').value='';
-    }
-
-    // ════════════════════════════════
-    // INIT
-    // ════════════════════════════════
-    function initApp(){
-        ['screen-login','screen-senior','screen-app'].forEach(id=>document.getElementById(id).classList.remove('active'));
-        if(currentUser.role==='senior'){
-            document.getElementById('screen-senior').classList.add('active');
-            initSenior();
-        } else {
-            document.getElementById('screen-app').classList.add('active');
-            initAidant();
-        }
-    }
-
-    // ════════════════════════════════
-    // SENIOR
-    // ════════════════════════════════
-    function initSenior(){
-        startClock();
-        document.getElementById('s-user-name').textContent=currentUser.prenom+' '+currentUser.nom;
-        document.getElementById('s-greeting').textContent='Bonjour, '+currentUser.prenom;
-        seniorTab('checkin',document.querySelector('.s-tab'));
-    }
-
-    function seniorTab(tab,el){
-        // Hide main check-in or sub-views
-        document.getElementById('senior-checkin-view').style.display='none';
-        document.querySelectorAll('.senior-view').forEach(v=>v.classList.remove('active'));
-        document.querySelector('.senior-footer') && (document.querySelector('.senior-footer').style.display='none');
-        document.querySelectorAll('.s-tab').forEach(t=>t.classList.remove('active'));
-        el.classList.add('active');
-
-        if(tab==='checkin'){
-            document.getElementById('senior-checkin-view').style.display='flex';
-            renderSeniorCheckin();
-        } else if(tab==='historique'){
-            const v=document.getElementById('senior-view-historique');
-            v.classList.add('active');
-            renderSeniorHistorique();
-        } else if(tab==='parametres'){
-            const v=document.getElementById('senior-view-parametres');
-            v.classList.add('active');
-            renderSeniorParametres();
-        }
-    }
-
-    function renderSeniorCheckin(){
-        const s=SD[currentUser.email];
-        const done=s&&s.reponse;
-        const banner=document.getElementById('done-banner');
-
-        if(done){
-            banner.style.display='flex';
-            const rep=s.reponse==='oui'?'✅ Vous avez dit OUI — tout va bien':'🆘 Vous avez demandé de l\'aide';
-            document.getElementById('done-banner-time').textContent=rep+' · à '+s.reponseTime;
-            document.getElementById('btn-oui').classList.add('disabled');
-            document.getElementById('btn-non').classList.add('disabled');
-        } else {
-            banner.style.display='none';
-            document.getElementById('btn-oui').classList.remove('disabled');
-            document.getElementById('btn-non').classList.remove('disabled');
-        }
-    }
-
-    function doOui(){
-        const s=SD[currentUser.email];
-        if(s&&s.reponse){showToast('Vous avez déjà répondu aujourd\'hui.','error');return;}
-        const t=getTimeStr();
-        s.reponse='oui'; s.reponseTime=t;
-        s.monthCheckins++;
-        s.history.unshift({date:new Date(TODAY),ok:true,rep:'oui',time:t});
-
-        // Notifier les aidants — ajouter au feed
-        pushToFeed(currentUser.email,'oui',t);
-        // Ajouter alerte info
-        ALERTS.unshift({id:Date.now(),type:'info',email:currentUser.email,name:currentUser.prenom+' '+currentUser.nom,time:t,msg:`${currentUser.prenom} ${currentUser.nom} a confirmé qu'il/elle allait bien. Check-in enregistré à ${t}.`,resolved:false});
-
-        document.getElementById('ov-oui-time').textContent='Enregistré à '+t;
-        document.getElementById('ov-oui').classList.add('show');
-        renderSeniorCheckin();
-    }
-
-    function doNon(){
-        const s=SD[currentUser.email];
-        if(s&&s.reponse){showToast('Vous avez déjà répondu aujourd\'hui.','error');return;}
-        const t=getTimeStr();
-        s.reponse='non'; s.reponseTime=t; s.alerte=true;
-
-        pushToFeed(currentUser.email,'non',t);
-        ALERTS.unshift({id:Date.now(),type:'help',email:currentUser.email,name:currentUser.prenom+' '+currentUser.nom,time:t,msg:`🆘 ${currentUser.prenom} ${currentUser.nom} a indiqué avoir BESOIN D'AIDE. Contactez-le/la immédiatement ! (${t})`,resolved:false});
-
-        document.getElementById('ov-non-time').textContent='Alerte envoyée à '+t;
-        document.getElementById('ov-non').classList.add('show');
-        renderSeniorCheckin();
-    }
-
+    function initSenior(){startClock();document.getElementById('s-user-name').textContent=currentUser.prenom+' '+currentUser.nom;document.getElementById('s-greeting').textContent='Bonjour, '+currentUser.prenom;seniorTab('checkin',document.querySelector('.s-tab'));}
+    function seniorTab(tab,el){document.getElementById('senior-checkin-view').style.display='none';document.querySelectorAll('.senior-view').forEach(v=>v.classList.remove('active'));document.querySelectorAll('.s-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');if(tab==='checkin'){document.getElementById('senior-checkin-view').style.display='flex';renderSeniorCheckin();}else if(tab==='historique'){document.getElementById('senior-view-historique').classList.add('active');renderSeniorHistorique();}else if(tab==='parametres'){document.getElementById('senior-view-parametres').classList.add('active');renderSeniorParametres();}}
+    function renderSeniorCheckin(){const s=SD[currentUser.email];const done=s&&s.reponse;const banner=document.getElementById('done-banner');if(done){banner.style.display='flex';document.getElementById('done-banner-time').textContent=(s.reponse==='oui'?'✅ Vous avez dit OUI — tout va bien':'🆘 Vous avez demandé de l\'aide')+' · à '+s.reponseTime;document.getElementById('btn-oui').classList.add('disabled');document.getElementById('btn-non').classList.add('disabled');}else{banner.style.display='none';document.getElementById('btn-oui').classList.remove('disabled');document.getElementById('btn-non').classList.remove('disabled');}}
+    function doOui(){const s=SD[currentUser.email];if(s&&s.reponse){showToast('Vous avez déjà répondu aujourd\'hui.','error');return;}const t=getTimeStr();s.reponse='oui';s.reponseTime=t;s.monthCheckins++;s.history.unshift({date:new Date(TODAY),ok:true,rep:'oui',time:t});pushToFeed(currentUser.email,'oui',t);ALERTS.unshift({id:Date.now(),type:'info',email:currentUser.email,name:currentUser.prenom+' '+currentUser.nom,time:t,msg:`${currentUser.prenom} ${currentUser.nom} a confirmé qu'il/elle allait bien. Check-in enregistré à ${t}.`,resolved:false});document.getElementById('ov-oui-time').textContent='Enregistré à '+t;document.getElementById('ov-oui').classList.add('show');renderSeniorCheckin();}
+    function doNon(){const s=SD[currentUser.email];if(s&&s.reponse){showToast('Vous avez déjà répondu aujourd\'hui.','error');return;}const t=getTimeStr();s.reponse='non';s.reponseTime=t;s.alerte=true;pushToFeed(currentUser.email,'non',t);ALERTS.unshift({id:Date.now(),type:'help',email:currentUser.email,name:currentUser.prenom+' '+currentUser.nom,time:t,msg:`🆘 ${currentUser.prenom} ${currentUser.nom} a indiqué avoir BESOIN D'AIDE. Contactez-le/la immédiatement ! (${t})`,resolved:false});document.getElementById('ov-non-time').textContent='Alerte envoyée à '+t;document.getElementById('ov-non').classList.add('show');renderSeniorCheckin();}
     function closeOv(id){document.getElementById(id).classList.remove('show');}
-
-    // Feed partagé pour les aidants
     let FEED=[];
-    function pushToFeed(email,rep,time){
-        const s=SD[email];
-        if(!s)return;
-        FEED.unshift({email,prenom:s.prenom,nom:s.nom,emoji:s.emoji,rep,time,ts:Date.now()});
-    }
-    // Pré-remplir le feed avec Roger qui a déjà répondu
+    function pushToFeed(email,rep,time){const s=SD[email];if(!s)return;FEED.unshift({email,prenom:s.prenom,nom:s.nom,emoji:s.emoji,rep,time,ts:Date.now()});}
     FEED.push({email:'roger@seniorlink.fr',prenom:'Roger',nom:'Martin',emoji:'👴',rep:'oui',time:'09h12',ts:Date.now()-3600000});
-
-    function renderSeniorHistorique(){
-        const s=SD[currentUser.email];
-        renderCalendar('s-cal-grid','s-cal-title',seniorCalMonth,currentUser.email);
-        renderHistoryList('s-history-list',s?s.history:[]);
-    }
-
+    function renderSeniorHistorique(){const s=SD[currentUser.email];renderCalendar('s-cal-grid','s-cal-title',seniorCalMonth,currentUser.email);renderHistoryList('s-history-list',s?s.history:[]);}
     function changeMonthSenior(dir){seniorCalMonth=new Date(seniorCalMonth.getFullYear(),seniorCalMonth.getMonth()+dir,1);renderSeniorHistorique();}
+    function renderSeniorParametres(){const u=currentUser;document.getElementById('s-settings-content').innerHTML=`<div class="settings-panel"><h3>⏰ Check-in</h3><div class="setting-row"><div class="sr-ico sri-s">⏰</div><div class="sr-lbl">Heure du rappel</div><div class="sr-val">09h00</div></div><div class="setting-row"><div class="sr-ico sri-s">⏳</div><div class="sr-lbl">Délai avant alerte</div><div class="sr-val">3 heures</div></div><div class="setting-row"><div class="sr-ico sri-s">🔔</div><div class="sr-lbl">Rappels activés</div><button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div></div><div class="settings-panel"><h3>📱 Notifications</h3><div class="setting-row"><div class="sr-ico sri-s">📱</div><div class="sr-lbl">Notifications push</div><button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div><div class="setting-row"><div class="sr-ico sri-a">💬</div><div class="sr-lbl">SMS d'alerte famille</div><button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div><div class="setting-row"><div class="sr-ico sri-s">📧</div><div class="sr-lbl">Email quotidien</div><button class="toggle off" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div></div><div class="settings-panel settings-full"><h3>👤 Mon compte</h3><div class="setting-row"><div class="sr-ico sri-s">👤</div><div class="sr-lbl">Nom</div><div class="sr-val">${u.prenom} ${u.nom}</div></div><div class="setting-row"><div class="sr-ico sri-s">📧</div><div class="sr-lbl">Email</div><div class="sr-val">${u.email}</div></div><div class="setting-row"><div class="sr-ico sri-r">🚪</div><div class="sr-lbl" style="color:var(--red-d);cursor:pointer" onclick="doLogout()">Se déconnecter</div></div></div>`;}
+    function startClock(){function tick(){const now=new Date();const j=['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'];const m=['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'];const el=document.getElementById('s-clock');if(el)el.textContent=`${j[now.getDay()]} ${now.getDate()} ${m[now.getMonth()]} · ${now.getHours().toString().padStart(2,'0')}h${now.getMinutes().toString().padStart(2,'0')}`;}tick();setInterval(tick,10000);}
 
-    function renderSeniorParametres(){
-        const u=currentUser;
-        document.getElementById('s-settings-content').innerHTML=`
-    <div class="settings-panel">
-      <h3>⏰ Check-in</h3>
-      <div class="setting-row"><div class="sr-ico sri-s">⏰</div><div class="sr-lbl">Heure du rappel</div><div class="sr-val">09h00</div></div>
-      <div class="setting-row"><div class="sr-ico sri-s">⏳</div><div class="sr-lbl">Délai avant alerte</div><div class="sr-val">3 heures</div></div>
-      <div class="setting-row"><div class="sr-ico sri-s">🔔</div><div class="sr-lbl">Rappels activés</div><button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div>
-    </div>
-    <div class="settings-panel">
-      <h3>📱 Notifications</h3>
-      <div class="setting-row"><div class="sr-ico sri-s">📱</div><div class="sr-lbl">Notifications push</div><button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div>
-      <div class="setting-row"><div class="sr-ico sri-a">💬</div><div class="sr-lbl">SMS d'alerte famille</div><button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div>
-      <div class="setting-row"><div class="sr-ico sri-s">📧</div><div class="sr-lbl">Email quotidien</div><button class="toggle off" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div>
-    </div>
-    <div class="settings-panel settings-full">
-      <h3>👤 Mon compte</h3>
-      <div class="setting-row"><div class="sr-ico sri-s">👤</div><div class="sr-lbl">Nom</div><div class="sr-val">${u.prenom} ${u.nom}</div></div>
-      <div class="setting-row"><div class="sr-ico sri-s">📧</div><div class="sr-lbl">Email</div><div class="sr-val">${u.email}</div></div>
-      <div class="setting-row"><div class="sr-ico sri-r">🚪</div><div class="sr-lbl" style="color:var(--red-d);cursor:pointer" onclick="doLogout()">Se déconnecter</div></div>
-    </div>`;
-    }
+    function initAidant(){document.getElementById('user-avatar-top').textContent=currentUser.initiales;document.getElementById('user-name-top').textContent=currentUser.prenom;document.getElementById('sidebar-name').textContent=currentUser.prenom+' '+currentUser.nom;document.getElementById('sidebar-email').textContent=currentUser.email;buildNav();navTo('dashboard');}
+    function buildNav(){const urgentCount=ALERTS.filter(a=>!a.resolved&&(a.type==='urgent'||a.type==='help')).length;const items=[{id:'dashboard',icon:'🏠',label:'Tableau de bord'},{id:'proches',icon:'👥',label:'Mes proches'},{id:'alertes',icon:'🔔',label:'Alertes',badge:urgentCount},{id:'parametres',icon:'⚙️',label:'Paramètres'}];document.getElementById('nav-items').innerHTML=items.map(i=>`<div class="nav-item" id="nav-${i.id}" onclick="navTo('${i.id}')"><span class="ni-icon">${i.icon}</span>${i.label}${i.badge?`<span class="nav-badge">${i.badge}</span>`:''}</div>`).join('');document.getElementById('notif-count').textContent=urgentCount;}
+    function navTo(id){document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));const navEl=document.getElementById('nav-'+id);if(navEl)navEl.classList.add('active');const viewEl=document.getElementById('view-'+id);if(viewEl)viewEl.classList.add('active');currentView=id;const labels={dashboard:'Tableau de bord',proches:'Mes proches',alertes:'Alertes',parametres:'Paramètres','profil-detail':'Profil senior'};document.getElementById('topbar-page').textContent=labels[id]||'';renderView(id);}
+    function renderView(id){if(id==='dashboard')renderDashboard();else if(id==='proches')renderProches();else if(id==='alertes')renderAlertes();else if(id==='parametres')renderParametres();}
 
-    // Clock
-    function startClock(){
-        function tick(){
-            const now=new Date();
-            const j=['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'];
-            const m=['jan','fév','mar','avr','mai','jun','jul','aoû','sep','oct','nov','déc'];
-            const h=now.getHours().toString().padStart(2,'0');
-            const min=now.getMinutes().toString().padStart(2,'0');
-            const el=document.getElementById('s-clock');
-            if(el) el.textContent=`${j[now.getDay()]} ${now.getDate()} ${m[now.getMonth()]} · ${h}h${min}`;
-        }
-        tick(); setInterval(tick,10000);
-    }
+    function renderDashboard(){const mois=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];document.getElementById('dash-greeting').textContent=`Bonjour, ${currentUser.prenom} 👋`;document.getElementById('dash-date').textContent=`Mardi 1 ${mois[TODAY.getMonth()]} ${TODAY.getFullYear()}`;const seniors=currentUser.seniors.map(e=>({email:e,...SD[e]})).filter(s=>s.prenom);const ok=seniors.filter(s=>s.reponse==='oui').length;const aide=seniors.filter(s=>s.reponse==='non').length;const attente=seniors.filter(s=>!s.reponse&&!s.alerte).length;const alerte=seniors.filter(s=>s.alerte&&!s.reponse).length+aide;document.getElementById('dash-stats').innerHTML=`<div class="stat-card"><div class="stat-icon si-sage">👥</div><div><div class="stat-num">${seniors.length}</div><div class="stat-lbl">Personnes suivies</div></div></div><div class="stat-card"><div class="stat-icon si-green">✅</div><div><div class="stat-num">${ok}</div><div class="stat-lbl">Check-in OK</div></div></div><div class="stat-card"><div class="stat-icon si-orange">⏳</div><div><div class="stat-num">${attente}</div><div class="stat-lbl">En attente</div></div></div><div class="stat-card" style="${alerte>0?'border-color:rgba(226,75,74,0.3)':''}"><div class="stat-icon si-red">🚨</div><div><div class="stat-num" style="${alerte>0?'color:var(--red)':''}">${alerte}</div><div class="stat-lbl">Alertes actives</div></div></div>`;const urgentSeniors=seniors.filter(s=>(s.alerte&&!s.reponse)||s.reponse==='non');const alertPanel=document.getElementById('alerts-panel');if(urgentSeniors.length>0){alertPanel.style.display='block';document.getElementById('alerts-panel-body').innerHTML=urgentSeniors.map(s=>`<div class="alert-row ${s.reponse==='non'?'non':''}"><div class="ar-icon">${s.reponse==='non'?'🆘':'🚨'}</div><div style="flex:1"><div class="ar-title">${s.prenom} ${s.nom} — ${s.reponse==='non'?"A besoin d'aide !":"Pas de check-in"}</div><div class="ar-sub">${s.ville}${s.reponse==='non'?' · A répondu NON à '+s.reponseTime:' · Alerte déclenchée'}</div><div class="ar-actions"><button class="btn-call" onclick="showToast('📞 Appel vers ${s.prenom}...')">📞 Appeler ${s.prenom}</button><button class="btn-resolve" onclick="resolveAlert('${s.email}')">Marquer résolu</button></div></div></div>`).join('');}else alertPanel.style.display='none';document.getElementById('seniors-panel-body').innerHTML=seniors.map(s=>{let cls,badge,detail;if(s.reponse==='oui'){cls='av-g';badge='<span class="sr-badge b-ok">✅ OUI — Va bien</span>';detail=`A répondu OUI à ${s.reponseTime}`;}else if(s.reponse==='non'){cls='av-r';badge='<span class="sr-badge b-non">🆘 NON — Besoin d\'aide</span>';detail=`A demandé de l'aide à ${s.reponseTime}`;}else if(s.alerte){cls='av-r';badge='<span class="sr-badge b-alert">⚠ Alerte</span>';detail='Aucune réponse — alerte envoyée';}else{cls='av-o';badge='<span class="sr-badge b-wait">⏳ En attente</span>';detail='En attente de réponse';}return `<div class="senior-row" onclick="openDetail('${s.email}')"><div class="sr-avatar ${cls}">${s.emoji}</div><div class="sr-info"><div class="sr-name">${s.prenom} ${s.nom}</div><div class="sr-detail">${detail}</div></div>${badge}</div>`;}).join('');if(FEED.length===0){document.getElementById('feed-panel-body').innerHTML='<div class="empty-state"><div class="es-icon">📡</div><p>Aucune réponse reçue aujourd\'hui</p></div>';}else{document.getElementById('feed-panel-body').innerHTML=FEED.slice(0,6).map(f=>{const isOui=f.rep==='oui';return `<div class="feed-item"><div class="feed-avatar ${isOui?'av-g':'av-r'}">${f.emoji}</div><div class="fi-info"><div class="fi-top"><span class="fi-name">${f.prenom} ${f.nom}</span><span class="fi-badge ${isOui?'b-ok':'b-non'}">${isOui?'✅ OUI':'🆘 NON'}</span><span class="fi-time">${f.time}</span></div><div class="fi-msg">${isOui?f.prenom+' a confirmé qu\'il/elle allait bien.':f.prenom+' a besoin d\'aide — contactez-le/la !'}</div></div></div>`;}).join('');}}
+    function resolveAlert(email){const s=SD[email];if(s){s.alerte=false;if(!s.reponse){s.reponse='oui';s.reponseTime='—';}}const a=ALERTS.find(x=>x.email===email&&!x.resolved);if(a)a.resolved=true;showToast('✅ Alerte résolue pour '+(s?s.prenom:''));buildNav();renderDashboard();}
 
-    // ════════════════════════════════
-    // AIDANT
-    // ════════════════════════════════
-    function initAidant(){
-        document.getElementById('user-avatar-top').textContent=currentUser.initiales;
-        document.getElementById('user-name-top').textContent=currentUser.prenom;
-        document.getElementById('sidebar-name').textContent=currentUser.prenom+' '+currentUser.nom;
-        document.getElementById('sidebar-email').textContent=currentUser.email;
-        buildNav();
-        navTo('dashboard');
-    }
+    function renderProches(){const seniors=currentUser.seniors.map(e=>({email:e,...SD[e]})).filter(s=>s.prenom);let html=seniors.map(s=>{let cls,sc,badge;if(s.reponse==='oui'){cls='ca-g';sc='cs-ok';badge='✅ OUI — Va bien';}else if(s.reponse==='non'){cls='ca-r';sc='cs-non';badge='🆘 NON — Besoin d\'aide';}else if(s.alerte){cls='ca-o';sc='cs-alert';badge='⚠ Alerte active';}else{cls='ca-s';sc='cs-wait';badge='⏳ En attente';}return `<div class="contact-card" onclick="openDetail('${s.email}')"><div class="c-avatar ${cls}">${s.emoji}</div><div class="c-name">${s.prenom} ${s.nom}</div><div class="c-role">${s.age} ans · ${s.ville}</div><div class="c-last">${s.reponse?'Répondu à '+s.reponseTime:'Pas encore répondu aujourd\'hui'}</div><span class="c-status ${sc}">${badge}</span></div>`;}).join('');html+=`<div class="add-card" onclick="openAddContact()"><div class="add-ico">+</div><div class="add-lbl">Ajouter un proche</div></div>`;document.getElementById('contacts-grid').innerHTML=html;}
 
-    function buildNav(){
-        const urgentCount=ALERTS.filter(a=>!a.resolved&&(a.type==='urgent'||a.type==='help')).length;
-        const items=[
-            {id:'dashboard',icon:'🏠',label:'Tableau de bord'},
-            {id:'proches',icon:'👥',label:'Mes proches'},
-            {id:'alertes',icon:'🔔',label:'Alertes',badge:urgentCount},
-            {id:'parametres',icon:'⚙️',label:'Paramètres'},
-        ];
-        document.getElementById('nav-items').innerHTML=items.map(i=>`
-    <div class="nav-item" id="nav-${i.id}" onclick="navTo('${i.id}')">
-      <span class="ni-icon">${i.icon}</span>${i.label}
-      ${i.badge?`<span class="nav-badge">${i.badge}</span>`:''}
-    </div>`).join('');
-        document.getElementById('notif-count').textContent=urgentCount;
-    }
-
-    function navTo(id){
-        document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
-        document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
-        const navEl=document.getElementById('nav-'+id);
-        if(navEl)navEl.classList.add('active');
-        const viewEl=document.getElementById('view-'+id);
-        if(viewEl)viewEl.classList.add('active');
-        currentView=id;
-        const labels={dashboard:'Tableau de bord',proches:'Mes proches',alertes:'Alertes',parametres:'Paramètres','profil-detail':'Profil senior'};
-        document.getElementById('topbar-page').textContent=labels[id]||'';
-        renderView(id);
-    }
-
-    function renderView(id){
-        if(id==='dashboard') renderDashboard();
-        else if(id==='proches') renderProches();
-        else if(id==='alertes') renderAlertes();
-        else if(id==='parametres') renderParametres();
-    }
-
-    // ── Dashboard ──
-    function renderDashboard(){
-        const mois=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
-        document.getElementById('dash-greeting').textContent=`Bonjour, ${currentUser.prenom} 👋`;
-        document.getElementById('dash-date').textContent=`Mardi 1 ${mois[TODAY.getMonth()]} ${TODAY.getFullYear()}`;
-
-        const seniors=currentUser.seniors.map(e=>({email:e,...SD[e]})).filter(s=>s.prenom);
-        const ok=seniors.filter(s=>s.reponse==='oui').length;
-        const aide=seniors.filter(s=>s.reponse==='non').length;
-        const attente=seniors.filter(s=>!s.reponse&&!s.alerte).length;
-        const alerte=seniors.filter(s=>s.alerte&&!s.reponse).length+aide;
-
-        document.getElementById('dash-stats').innerHTML=`
-    <div class="stat-card"><div class="stat-icon si-sage">👥</div><div><div class="stat-num">${seniors.length}</div><div class="stat-lbl">Personnes suivies</div></div></div>
-    <div class="stat-card"><div class="stat-icon si-green">✅</div><div><div class="stat-num">${ok}</div><div class="stat-lbl">Check-in OK</div></div></div>
-    <div class="stat-card"><div class="stat-icon si-orange">⏳</div><div><div class="stat-num">${attente}</div><div class="stat-lbl">En attente</div></div></div>
-    <div class="stat-card" style="${alerte>0?'border-color:rgba(226,75,74,0.3)':''}"><div class="stat-icon si-red">🚨</div><div><div class="stat-num" style="${alerte>0?'color:var(--red)':''}">${alerte}</div><div class="stat-lbl">Alertes actives</div></div></div>`;
-
-        // Panel alertes
-        const urgentSeniors=seniors.filter(s=>s.alerte&&!s.reponse||s.reponse==='non');
-        const alertPanel=document.getElementById('alerts-panel');
-        if(urgentSeniors.length>0){
-            alertPanel.style.display='block';
-            document.getElementById('alerts-panel-body').innerHTML=urgentSeniors.map(s=>`
-      <div class="alert-row ${s.reponse==='non'?'non':''}">
-        <div class="ar-icon">${s.reponse==='non'?'🆘':'🚨'}</div>
-        <div style="flex:1">
-          <div class="ar-title">${s.prenom} ${s.nom} — ${s.reponse==='non'?"A besoin d'aide !":"Pas de check-in"}</div>
-          <div class="ar-sub">${s.ville}${s.reponse==='non'?' · A répondu NON à '+s.reponseTime:' · Alerte déclenchée'}</div>
-          <div class="ar-actions">
-            <button class="btn-call" onclick="showToast('📞 Appel vers ${s.prenom} (${s.contact||''})...')">📞 Appeler ${s.prenom}</button>
-            <button class="btn-resolve" onclick="resolveAlert('${s.email}')">Marquer résolu</button>
-          </div>
-        </div>
-      </div>`).join('');
-        } else alertPanel.style.display='none';
-
-        // Panel seniors
-        document.getElementById('seniors-panel-body').innerHTML=seniors.map(s=>{
-            let cls,badge,detail;
-            if(s.reponse==='oui'){cls='av-g';badge='<span class="sr-badge b-ok">✅ OUI — Va bien</span>';detail=`A répondu OUI à ${s.reponseTime}`;}
-            else if(s.reponse==='non'){cls='av-r';badge='<span class="sr-badge b-non">🆘 NON — Besoin d\'aide</span>';detail=`A demandé de l'aide à ${s.reponseTime}`;}
-            else if(s.alerte){cls='av-r';badge='<span class="sr-badge b-alert">⚠ Alerte</span>';detail='Aucune réponse — alerte envoyée';}
-            else{cls='av-o';badge='<span class="sr-badge b-wait">⏳ En attente</span>';detail='En attente de réponse';}
-            return `<div class="senior-row" onclick="openDetail('${s.email}')">
-      <div class="sr-avatar ${cls}">${s.emoji}</div>
-      <div class="sr-info"><div class="sr-name">${s.prenom} ${s.nom}</div><div class="sr-detail">${detail}</div></div>
-      ${badge}
-    </div>`;
-        }).join('');
-
-        // Feed temps réel
-        if(FEED.length===0){
-            document.getElementById('feed-panel-body').innerHTML='<div class="empty-state"><div class="es-icon">📡</div><p>Aucune réponse reçue aujourd\'hui</p></div>';
-        } else {
-            document.getElementById('feed-panel-body').innerHTML=FEED.slice(0,6).map(f=>{
-                const isOui=f.rep==='oui';
-                return `<div class="feed-item">
-        <div class="feed-avatar ${isOui?'av-g':'av-r'}">${f.emoji}</div>
-        <div class="fi-info">
-          <div class="fi-top">
-            <span class="fi-name">${f.prenom} ${f.nom}</span>
-            <span class="fi-badge ${isOui?'b-ok':'b-non'}">${isOui?'✅ OUI':'🆘 NON'}</span>
-            <span class="fi-time">${f.time}</span>
-          </div>
-          <div class="fi-msg">${isOui?f.prenom+' a confirmé qu\'il/elle allait bien.':f.prenom+' a besoin d\'aide — contactez-le/la !'}</div>
-        </div>
-      </div>`;
-            }).join('');
-        }
-    }
-
-    function resolveAlert(email){
-        const s=SD[email];
-        if(s){s.alerte=false;if(!s.reponse){s.reponse='oui';s.reponseTime='—';}}
-        const a=ALERTS.find(x=>x.email===email&&!x.resolved);
-        if(a)a.resolved=true;
-        showToast('✅ Alerte résolue pour '+(s?s.prenom:''));
-        buildNav(); renderDashboard();
-    }
-
-    // ── Proches ──
-    function renderProches(){
-        const seniors=currentUser.seniors.map(e=>({email:e,...SD[e]})).filter(s=>s.prenom);
-        let html=seniors.map(s=>{
-            let cls,sc,badge;
-            if(s.reponse==='oui'){cls='ca-g';sc='cs-ok';badge='✅ OUI — Va bien';}
-            else if(s.reponse==='non'){cls='ca-r';sc='cs-non';badge='🆘 NON — Besoin d\'aide';}
-            else if(s.alerte){cls='ca-o';sc='cs-alert';badge='⚠ Alerte active';}
-            else{cls='ca-s';sc='cs-wait';badge='⏳ En attente';}
-            return `<div class="contact-card" onclick="openDetail('${s.email}')">
-      <div class="c-avatar ${cls}">${s.emoji}</div>
-      <div class="c-name">${s.prenom} ${s.nom}</div>
-      <div class="c-role">${s.age} ans · ${s.ville}</div>
-      <div class="c-last">${s.reponse?'Répondu à '+s.reponseTime:'Pas encore répondu aujourd\'hui'}</div>
-      <span class="c-status ${sc}">${badge}</span>
-    </div>`;
-        }).join('');
-        html+=`<div class="add-card" onclick="openAddContact()"><div class="add-ico">+</div><div class="add-lbl">Ajouter un proche</div></div>`;
-        document.getElementById('contacts-grid').innerHTML=html;
-    }
-
-    // ── Profil détail ──
-    function openDetail(email){
-        const key=Object.keys(SD).find(k=>k===email);
-        if(!key)return;
-        currentDetailSenior=key;
-        detailCalMonth=new Date(TODAY);
-        document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
-        document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
-        document.getElementById('view-profil-detail').classList.add('active');
-        document.getElementById('topbar-page').textContent='Profil senior';
-        renderDetailView(key);
-    }
-
-    function renderDetailView(key){
-        const s=SD[key];
-        if(!s)return;
-        const rate=Math.round(s.monthCheckins/s.monthTotal*100);
-        let stcol,sttext;
-        if(s.reponse==='oui'){stcol='var(--green-d)';sttext='✅ A répondu OUI à '+s.reponseTime;}
-        else if(s.reponse==='non'){stcol='#c0392b';sttext='🆘 A besoin d\'aide — a répondu NON à '+s.reponseTime;}
-        else if(s.alerte){stcol='var(--red-d)';sttext='⚠ Alerte — aucune réponse';}
-        else{stcol='var(--orange)';sttext='⏳ En attente de réponse';}
-        document.getElementById('detail-profile-header').innerHTML=`
-    <div class="ph-avatar">${s.emoji}</div>
-    <div class="ph-info">
-      <h2>${s.prenom} ${s.nom}</h2>
-      <p>${s.age} ans · ${s.ville} · 📞 ${s.contact}</p>
-      <div class="ph-status" style="color:${stcol}">${sttext}</div>
-    </div>
-    <div class="ph-stats">
-      <div class="phs-box"><div class="phs-num">${s.monthCheckins}</div><div class="phs-lbl">Jours ce mois</div></div>
-      <div class="phs-box"><div class="phs-num">${rate}%</div><div class="phs-lbl">Taux réponse</div></div>
-      <div class="phs-box"><div class="phs-num">${s.streak}j</div><div class="phs-lbl">Série actuelle</div></div>
-    </div>`;
-        renderCalendar('detail-cal-grid','detail-cal-title',detailCalMonth,key);
-        renderHistoryList('detail-history-list',s.history);
-    }
+    function openDetail(email){const key=Object.keys(SD).find(k=>k===email);if(!key)return;currentDetailSenior=key;detailCalMonth=new Date(TODAY);document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));document.getElementById('view-profil-detail').classList.add('active');document.getElementById('topbar-page').textContent='Profil senior';renderDetailView(key);}
+    function renderDetailView(key){const s=SD[key];if(!s)return;const rate=Math.round(s.monthCheckins/s.monthTotal*100);let stcol,sttext;if(s.reponse==='oui'){stcol='var(--green-d)';sttext='✅ A répondu OUI à '+s.reponseTime;}else if(s.reponse==='non'){stcol='#c0392b';sttext='🆘 A besoin d\'aide — a répondu NON à '+s.reponseTime;}else if(s.alerte){stcol='var(--red-d)';sttext='⚠ Alerte — aucune réponse';}else{stcol='var(--orange)';sttext='⏳ En attente de réponse';}document.getElementById('detail-profile-header').innerHTML=`<div class="ph-avatar">${s.emoji}</div><div class="ph-info"><h2>${s.prenom} ${s.nom}</h2><p>${s.age} ans · ${s.ville} · 📞 ${s.contact}</p><div class="ph-status" style="color:${stcol}">${sttext}</div></div><div class="ph-stats"><div class="phs-box"><div class="phs-num">${s.monthCheckins}</div><div class="phs-lbl">Jours ce mois</div></div><div class="phs-box"><div class="phs-num">${rate}%</div><div class="phs-lbl">Taux réponse</div></div><div class="phs-box"><div class="phs-num">${s.streak}j</div><div class="phs-lbl">Série actuelle</div></div></div>`;renderCalendar('detail-cal-grid','detail-cal-title',detailCalMonth,key);renderHistoryList('detail-history-list',s.history);}
     function changeMonthDetail(dir){detailCalMonth=new Date(detailCalMonth.getFullYear(),detailCalMonth.getMonth()+dir,1);if(currentDetailSenior)renderDetailView(currentDetailSenior);}
 
-    // ── Alertes ──
-    function renderAlertes(){
-        const filtered=alertFilter==='all'?ALERTS:ALERTS.filter(a=>alertFilter==='resolved'?a.resolved:(a.type===alertFilter&&!a.resolved));
-        document.getElementById('alerts-count-lbl').textContent=`${ALERTS.length} notification(s) aujourd'hui`;
-        if(!filtered.length){document.getElementById('alerts-list').innerHTML='<div class="empty-state"><div class="es-icon">🔔</div><p>Aucune alerte dans cette catégorie</p></div>';return;}
-        document.getElementById('alerts-list').innerHTML=filtered.map(a=>`
-    <div class="alert-card ${a.type==='urgent'?'urgent':''} ${a.type==='help'?'need-help':''} ${a.resolved?'resolved':''}">
-      <div class="ac-header">
-        <span class="ac-type ${a.resolved?'t-resolved':a.type==='urgent'?'t-urgent':a.type==='help'?'t-help':'t-info'}">${a.resolved?'Résolu':a.type==='urgent'?'Urgent':a.type==='help'?"🆘 Besoin d'aide":'Info'}</span>
-        <span class="ac-name">${a.name}</span>
-        <span class="ac-time">${a.time}</span>
-      </div>
-      <div class="ac-body">
-        <div class="ac-msg">${a.msg}</div>
-        ${!a.resolved?`<div class="ac-actions">
-          <button class="btn-ac-call" onclick="showToast('📞 Appel vers ${a.name}...')">📞 Appeler</button>
-          <button class="btn-ac-ok" onclick="resolveAlertById(${a.id})">Marquer résolu</button>
-        </div>`:'<span style="font-size:0.78rem;color:var(--green-d);font-weight:600">✅ Résolu</span>'}
-      </div>
-    </div>`).join('');
-    }
+    function renderAlertes(){const filtered=alertFilter==='all'?ALERTS:ALERTS.filter(a=>alertFilter==='resolved'?a.resolved:(a.type===alertFilter&&!a.resolved));document.getElementById('alerts-count-lbl').textContent=`${ALERTS.length} notification(s) aujourd'hui`;if(!filtered.length){document.getElementById('alerts-list').innerHTML='<div class="empty-state"><div class="es-icon">🔔</div><p>Aucune alerte dans cette catégorie</p></div>';return;}document.getElementById('alerts-list').innerHTML=filtered.map(a=>`<div class="alert-card ${a.type==='urgent'?'urgent':''} ${a.type==='help'?'need-help':''} ${a.resolved?'resolved':''}"><div class="ac-header"><span class="ac-type ${a.resolved?'t-resolved':a.type==='urgent'?'t-urgent':a.type==='help'?'t-help':'t-info'}">${a.resolved?'Résolu':a.type==='urgent'?'Urgent':a.type==='help'?"🆘 Besoin d'aide":'Info'}</span><span class="ac-name">${a.name}</span><span class="ac-time">${a.time}</span></div><div class="ac-body"><div class="ac-msg">${a.msg}</div>${!a.resolved?`<div class="ac-actions"><button class="btn-ac-call" onclick="showToast('📞 Appel vers ${a.name}...')">📞 Appeler</button><button class="btn-ac-ok" onclick="resolveAlertById(${a.id})">Marquer résolu</button></div>`:'<span style="font-size:0.78rem;color:var(--green-d);font-weight:600">✅ Résolu</span>'}</div></div>`).join('');}
+    function filterAlerts(f,btn){alertFilter=f;document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderAlertes();}
+    function resolveAlertById(id){const a=ALERTS.find(x=>x.id===id);if(a)a.resolved=true;showToast('✅ Alerte marquée comme résolue');renderAlertes();buildNav();}
 
-    function filterAlerts(f,btn){
-        alertFilter=f;
-        document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('on'));
-        btn.classList.add('on');
-        renderAlertes();
-    }
+    function renderParametres(){document.getElementById('settings-content').innerHTML=`<div class="settings-panel"><h3>🔔 Alertes</h3><div class="setting-row"><div class="sr-ico sri-s">⏳</div><div class="sr-lbl">Délai avant alerte</div><div class="sr-val">3 heures</div></div><div class="setting-row"><div class="sr-ico sri-s">📱</div><div class="sr-lbl">Alertes push</div><button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div><div class="setting-row"><div class="sr-ico sri-a">💬</div><div class="sr-lbl">Alertes SMS</div><button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div><div class="setting-row"><div class="sr-ico sri-s">📧</div><div class="sr-lbl">Résumé email quotidien</div><button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div></div><div class="settings-panel"><h3>📊 Rapports</h3><div class="setting-row"><div class="sr-ico sri-s">📊</div><div class="sr-lbl">Rapport hebdomadaire</div><button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div><div class="setting-row"><div class="sr-ico sri-s">📅</div><div class="sr-lbl">Rapport mensuel</div><button class="toggle off" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div></div><div class="settings-panel settings-full"><h3>👤 Mon compte</h3><div class="setting-row"><div class="sr-ico sri-s">👤</div><div class="sr-lbl">Nom</div><div class="sr-val">${currentUser.prenom} ${currentUser.nom}</div></div><div class="setting-row"><div class="sr-ico sri-s">📧</div><div class="sr-lbl">Email</div><div class="sr-val">${currentUser.email}</div></div><div class="setting-row"><div class="sr-ico sri-r">🚪</div><div class="sr-lbl" style="color:var(--red-d);cursor:pointer" onclick="doLogout()">Se déconnecter</div></div></div>`;}
 
-    function resolveAlertById(id){
-        const a=ALERTS.find(x=>x.id===id);
-        if(a)a.resolved=true;
-        showToast('✅ Alerte marquée comme résolue');
-        renderAlertes(); buildNav();
-    }
+    function renderCalendar(gridId,titleId,month,email){const MOIS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];document.getElementById(titleId).textContent=MOIS[month.getMonth()]+' '+month.getFullYear();const s=SD[email];const history=s?.history||[];const first=new Date(month.getFullYear(),month.getMonth(),1);const last=new Date(month.getFullYear(),month.getMonth()+1,0);const startDow=first.getDay()===0?6:first.getDay()-1;let html='';for(let i=0;i<startDow;i++)html+='<div class="cal-cell cc-empty"></div>';for(let d=1;d<=last.getDate();d++){const date=new Date(month.getFullYear(),month.getMonth(),d);const isFuture=date>TODAY;const isToday=date.toDateString()===TODAY.toDateString();const h=history.find(x=>x.date.toDateString()===date.toDateString());let cls='cal-cell ';if(isToday)cls+='cc-today';else if(isFuture)cls+='cc-future';else if(h&&h.ok)cls+='cc-ok';else if(h&&!h.ok)cls+='cc-miss';else cls+='cc-empty';html+=`<div class="${cls}">${d}</div>`;}document.getElementById(gridId).innerHTML=html;}
+    function renderHistoryList(containerId,history){if(!history||!history.length){document.getElementById(containerId).innerHTML='<div class="empty-state"><div class="es-icon">📋</div><p>Aucun historique</p></div>';return;}const sorted=[...history].sort((a,b)=>b.date-a.date).slice(0,20);document.getElementById(containerId).innerHTML=sorted.map(h=>`<div class="history-item"><div class="hi-dot" style="background:${h.ok?'var(--green)':'var(--red)'}"></div><div class="hi-date">${h.date.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}</div>${h.rep?`<span class="hi-response" style="color:${h.rep==='oui'?'var(--green-d)':'var(--red-d)'}">${h.rep==='oui'?'OUI':'NON'}</span>`:''}<div class="hi-time">${h.time||'—'}</div><span class="hi-badge ${h.ok?'b-ok':'b-alert'}">${h.ok?'✓ Confirmé':'✗ Absent'}</span></div>`).join('');}
 
-    // ── Paramètres aidant ──
-    function renderParametres(){
-        document.getElementById('settings-content').innerHTML=`
-    <div class="settings-panel">
-      <h3>🔔 Alertes</h3>
-      <div class="setting-row"><div class="sr-ico sri-s">⏳</div><div class="sr-lbl">Délai avant alerte</div><div class="sr-val">3 heures</div></div>
-      <div class="setting-row"><div class="sr-ico sri-s">📱</div><div class="sr-lbl">Alertes push</div><button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div>
-      <div class="setting-row"><div class="sr-ico sri-a">💬</div><div class="sr-lbl">Alertes SMS</div><button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div>
-      <div class="setting-row"><div class="sr-ico sri-s">📧</div><div class="sr-lbl">Résumé email quotidien</div><button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div>
-    </div>
-    <div class="settings-panel">
-      <h3>📊 Rapports</h3>
-      <div class="setting-row"><div class="sr-ico sri-s">📊</div><div class="sr-lbl">Rapport hebdomadaire</div><button class="toggle on" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div>
-      <div class="setting-row"><div class="sr-ico sri-s">📅</div><div class="sr-lbl">Rapport mensuel</div><button class="toggle off" onclick="this.classList.toggle('on');this.classList.toggle('off')"></button></div>
-    </div>
-    <div class="settings-panel settings-full">
-      <h3>👤 Mon compte</h3>
-      <div class="setting-row"><div class="sr-ico sri-s">👤</div><div class="sr-lbl">Nom</div><div class="sr-val">${currentUser.prenom} ${currentUser.nom}</div></div>
-      <div class="setting-row"><div class="sr-ico sri-s">📧</div><div class="sr-lbl">Email</div><div class="sr-val">${currentUser.email}</div></div>
-      <div class="setting-row"><div class="sr-ico sri-r">🚪</div><div class="sr-lbl" style="color:var(--red-d);cursor:pointer" onclick="doLogout()">Se déconnecter</div></div>
-    </div>`;
-    }
-
-    // ════════════════════════════════
-    // CALENDRIER & HISTORIQUE
-    // ════════════════════════════════
-    function renderCalendar(gridId,titleId,month,email){
-        const MOIS=['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
-        document.getElementById(titleId).textContent=MOIS[month.getMonth()]+' '+month.getFullYear();
-        const s=SD[email]; const history=s?.history||[];
-        const first=new Date(month.getFullYear(),month.getMonth(),1);
-        const last=new Date(month.getFullYear(),month.getMonth()+1,0);
-        const startDow=first.getDay()===0?6:first.getDay()-1;
-        let html='';
-        for(let i=0;i<startDow;i++) html+='<div class="cal-cell cc-empty"></div>';
-        for(let d=1;d<=last.getDate();d++){
-            const date=new Date(month.getFullYear(),month.getMonth(),d);
-            const isFuture=date>TODAY;
-            const isToday=date.toDateString()===TODAY.toDateString();
-            const h=history.find(x=>x.date.toDateString()===date.toDateString());
-            let cls='cal-cell ';
-            if(isToday) cls+='cc-today';
-            else if(isFuture) cls+='cc-future';
-            else if(h&&h.ok) cls+='cc-ok';
-            else if(h&&!h.ok) cls+='cc-miss';
-            else cls+='cc-empty';
-            html+=`<div class="${cls}">${d}</div>`;
-        }
-        document.getElementById(gridId).innerHTML=html;
-    }
-
-    function renderHistoryList(containerId,history){
-        if(!history||!history.length){document.getElementById(containerId).innerHTML='<div class="empty-state"><div class="es-icon">📋</div><p>Aucun historique</p></div>';return;}
-        const sorted=[...history].sort((a,b)=>b.date-a.date).slice(0,20);
-        document.getElementById(containerId).innerHTML=sorted.map(h=>`
-    <div class="history-item">
-      <div class="hi-dot" style="background:${h.ok?'var(--green)':'var(--red)'}"></div>
-      <div class="hi-date">${h.date.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}</div>
-      ${h.rep?`<span class="hi-response" style="color:${h.rep==='oui'?'var(--green-d)':'var(--red-d)'}">${h.rep==='oui'?'OUI':'NON'}</span>`:''}
-      <div class="hi-time">${h.time||'—'}</div>
-      <span class="hi-badge ${h.ok?'b-ok':'b-alert'}">${h.ok?'✓ Confirmé':'✗ Absent'}</span>
-    </div>`).join('');
-    }
-
-    // ════════════════════════════════
-    // UTILITAIRES
-    // ════════════════════════════════
     function getTimeStr(){const now=new Date();return `${now.getHours().toString().padStart(2,'0')}h${now.getMinutes().toString().padStart(2,'0')}`;}
-
     function openAddContact(){document.getElementById('modal-add-contact').classList.add('open')}
     function closeModal(){document.getElementById('modal-add-contact').classList.remove('open')}
-    function confirmAddContact(){
-        const email=document.getElementById('add-email').value.trim();
-        if(!email){showToast('Veuillez entrer un email valide','error');return;}
-        closeModal();
-        showToast('✅ Invitation envoyée à '+email);
-    }
-
-    function showToast(msg,type=''){
-        const t=document.getElementById('toast');
-        t.textContent=msg; t.className='toast'+(type?' '+type:'');
-        setTimeout(()=>t.classList.add('show'),10);
-        setTimeout(()=>t.classList.remove('show'),3500);
-    }
-
+    function confirmAddContact(){const email=document.getElementById('add-email').value.trim();if(!email){showToast('Veuillez entrer un email valide','error');return;}closeModal();showToast('✅ Invitation envoyée à '+email);}
+    function showToast(msg,type=''){const t=document.getElementById('toast');t.textContent=msg;t.className='toast'+(type?' '+type:'');setTimeout(()=>t.classList.add('show'),10);setTimeout(()=>t.classList.remove('show'),3500);}
     document.addEventListener('keydown',e=>{if(e.key==='Enter'&&document.getElementById('screen-login').classList.contains('active'))doLogin();});
 </script>
 </body>
